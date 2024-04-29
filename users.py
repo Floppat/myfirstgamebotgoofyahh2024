@@ -14,7 +14,7 @@ class User:
                 f'    | Coins: {self.coins}\n'
                 f'    | Pet: {self.pet}')
     
-    async def train(self, interaction: Interaction ):
+    async def train(self, interaction: Interaction):
         if not self.pet.can_train():
             await interaction.response.send_message('сперва вашему питомцу следует восстановить силы')
             return
@@ -22,7 +22,7 @@ class User:
         await interaction.response.send_message(f'питомец прошёл изнурительные тренеровки{self.pet}')
         return
 
-    async def feed(self, interaction: Interaction ):
+    async def feed(self, interaction: Interaction):
         if not self.pet.can_feed():
             await interaction.response.send_message('Ваш питомец не голоден')
             return
@@ -30,7 +30,7 @@ class User:
         await interaction.response.send_message(f'питомец сытно поел{self.pet}')
         return
 
-    async def attack(self, interaction: Interaction ):
+    async def attack(self, interaction: Interaction):
         if not self.pet.can_train():
             await interaction.response.send_message('сперва вашему питомцу следует восстановить силы')
             return
@@ -55,7 +55,7 @@ class User:
                                 f'итого монет: {self.coins}\n'
                                 f'ваши характеристики:{self.pet}')
                 return       
-    async def sleep(self, interaction: Interaction ):
+    async def sleep(self, interaction: Interaction):
         if not self.pet.can_sleep():
             await interaction.response.send_message('Ваш питомец ещё не устал')
             return
