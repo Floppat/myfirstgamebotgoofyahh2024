@@ -41,7 +41,7 @@ async def cmd(interaction: discord.Interaction):
     await interaction.response.send_message(message)
 
 @bot.tree.command(name='goofyahh', description='супер важная секретная команда')
-async def GoofyAhh(interaction: discord.Interaction):
+async def goofyahh(interaction: discord.Interaction):
     user = get_user(user_id=interaction.user.id)
     if not user:
         await interaction.response.send_message('Вы не зарегистрированы, поэтому не можете использовать эту команду.')
